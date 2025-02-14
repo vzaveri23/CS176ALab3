@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
     printf("--- %s ping statistics ---\n", host);
     printf("%d packets transmitted, %d received, %d%% packet loss\n", transmitted, received, loss);
     if (received) {
-        printf("rtt min/avg/max = %.3f/%.3f/%.3f ms\n", min_rtt, avg_rtt, max_rtt);
+        printf("rtt min/avg/max = %.3f %.3f %.3f ms\n", min_rtt, avg_rtt, max_rtt);
     }
     
     close(sockfd);

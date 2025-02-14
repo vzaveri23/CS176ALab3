@@ -1,3 +1,5 @@
+# Server side code for UDP ping
+
 import random
 from socket import *
 # Create a UDP socket

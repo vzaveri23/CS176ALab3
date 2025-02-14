@@ -1,3 +1,7 @@
+//sources: 
+// A python UDP ping client that we referenced: https://gist.github.com/ccormier/8db98d28c8990d66ce0c4b7233aed28f
+// Some other source code we referenced: https://cboard.cprogramming.com/networking-device-communication/41635-ping-program.html
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -19,7 +23,7 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Usage: %s <host> <port>\n", argv[0]);
         exit(1);
     }
-    
+    // a lot of this stuff was pretty similar to the first lab, which we referenced
     char *host = argv[1];
     int port = atoi(argv[2]);
     

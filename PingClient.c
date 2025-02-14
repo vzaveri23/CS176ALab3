@@ -64,10 +64,10 @@ int main(int argc, char *argv[]) {
     
     double avg_rtt = received ? sum_rtt / received : 0;
     int loss = ((PING_COUNT - received) * 100) / PING_COUNT;
-    printf("--- ping statistics ---\n");
+    printf("--- %s ping statistics ---\n", host);
     printf("%d packets transmitted, %d received, %d%% packet loss\n", transmitted, received, loss);
     if (received) {
-        printf("rtt min/avg/max = %.2f/%.2f/%.2f ms\n", min_rtt, avg_rtt, max_rtt);
+        printf("rtt min/avg/max = %.3f/%.3f/%.3f ms\n", min_rtt, avg_rtt, max_rtt);
     }
     
     close(sockfd);

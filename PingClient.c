@@ -150,10 +150,14 @@ int main(int argc, char *argv[]) {
     printf("--- %s ping statistics ---\n", host);
     printf("%d packets transmitted, %d received, %d%% packet loss\n", transmitted, received, loss);
     if (received) {
+        // printf("rtt min/avg/max = %.3f %.3f %.3f ms\n", 
+        //     round(min_rtt * 1000) / 1000.0,
+        //     round(avg_rtt * 1000) / 1000.0,
+        //     round(max_rtt * 1000) / 1000.0);
         printf("rtt min/avg/max = %.3f %.3f %.3f ms\n", 
-            round(min_rtt * 1000) / 1000.0,
-            round(avg_rtt * 1000) / 1000.0,
-            round(max_rtt * 1000) / 1000.0);
+        (float)(int)(min_rtt * 1000 + 0.5) / 1000,
+        (float)(int)(avg_rtt * 1000 + 0.5) / 1000,
+        (float)(int)(max_rtt * 1000 + 0.5) / 1000);
     }
     
     close(sockfd);
